@@ -11,7 +11,7 @@ ss={
     roll: 123,
     fun(message:string){
         console.log("asaasaaaaaaaaaaaaa");
-      return 2;
+      return 25;
     }
 }
 
