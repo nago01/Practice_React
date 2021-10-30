@@ -50,6 +50,7 @@ function Game(props) {
                 </div>
             </form>
             {props.name}
+            {props.xyz}
         </div>
     )
 }
