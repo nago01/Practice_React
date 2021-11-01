@@ -35,7 +35,7 @@ function Game(props) {
                     }
                 }/>
                 <br></br>
-                <button></button>
+                <button className="button"></button>
                 <div>
                     {
                         state.map((curElem)=>{

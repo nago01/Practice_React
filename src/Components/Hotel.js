@@ -5,7 +5,7 @@ import { useState } from 'react/cjs/react.development';
 import SingleMenu from './SingleMenu';
 import Navbar from './Navbar';
 function Hotel() {
-    const [menudata,updateData]= useState(Backenddata);
+    var [menudata,updateData]= useState(Backenddata);
     const uniqueList = [
         ...new Set(
          menudata.map((curElem) => {
@@ -19,6 +19,7 @@ function Hotel() {
     // console.log(menudata);
     // console.log(menudata.length+1+ " = "+ "this the length of data passed");
     const fliteritem = (catagory) => {
+      menudata = Backenddata;
       if (catagory === "All") {
         updateData(Backenddata);
         return;
