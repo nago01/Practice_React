@@ -6,15 +6,15 @@ import {React,useState,useEffect,useRef} from 'react'
 //     ()=> fun1254(100)
 // }>Mole</button>
 
-const Mole = ({fun1254}) => {
+const Mole = ({fun1254 ,id}) => {
   const buttonRef = useRef(null)
   useEffect(() => {
     gsap.set(buttonRef.current, {
-      yPercent: 100,
+      yPercent: id*100,
       display: 'column'
     })
     gsap.to(buttonRef.current, {
-      yPercent: 0,
+      yPercent: id+2,
       yoyo: true,
       repeat: -1,
     })
@@ -83,11 +83,12 @@ function Pract() {
         <div>
           <Score showScore={currscore}/>
           <div className="container">
-            <Mole fun1254 = {fun}/>
-            <Mole fun1254 = {fun}/>
-            <Mole fun1254 = {fun}/>
-            <Mole fun1254 = {fun}/>
-            <Mole fun1254 = {fun}/>
+            <Mole fun1254 = {fun} id={1}/>
+            <Mole fun1254 = {fun} id={2}/>
+            <Mole fun1254 = {fun} id={3}/>
+            <Mole fun1254 = {fun} id={4}/>
+            <Mole fun1254 = {fun} id={5}/>
+            <Mole fun1254 = {fun} id={7}/>
           </div>
           <Timer time={TIME_LIMIT}
           onEnd={onEnd}/>

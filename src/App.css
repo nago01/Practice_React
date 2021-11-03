@@ -73,12 +73,16 @@ h1 {
 }
 
 .container{
-  display : flex;
-  align-items:flex-end;
+  display : grid;
+  align-items:center;
   padding-left: 10px;
   padding-right: 10px;
+  padding:10px;
   background-color: rgb(88, 11, 11);
-  flex-basis: 100px;
+  /* flex-basis: 100px;
 	flex-grow: 0;
-	flex-shrink: 0;
+	flex-shrink: 0; */
+  grid-template-columns: repeat(3, auto);
+  grid-template-rows: repeat(2, auto);
+  border-radius: 100px;
 }
